@@ -6,6 +6,7 @@ body{
 .formposition{
 position: relative;
 float: right;
+padding: 0.4%;
 }
 
 .b3{
@@ -57,3 +58,9 @@ ul.a {
     list-style-type: circle;
     color: rgba(166, 166, 166, 1);
   }
+
+.bottomform{
+   position: relative;
+   text-align: center;
+   
+}
