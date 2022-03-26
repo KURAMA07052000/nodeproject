@@ -1,15 +1,31 @@
-/*Login Form*/
+/*Login & SignUp Form*/
 body{
     background-color: #E09165;
 }
 
 .formposition{
-position: relative;
-float: right;
-padding: 0.4%;
+ position: relative;
+ float: right;
+ padding: 0.4%;
 }
 
+.formpositionSU{
+    position: relative;
+   float: right;
+   padding: 0.4%;
+    }
+
 .b3{
+	width: 90%;
+	max-width: 700px;
+	margin: 0p auto;
+	padding: 20px;
+	background-color: #ffffff;
+	border-radius: 30px;
+	margin-bottom: 20px;
+}
+
+.b4{
 	width: 90%;
 	max-width: 700px;
 	margin: 0p auto;
@@ -62,5 +78,4 @@ ul.a {
 .bottomform{
    position: relative;
    text-align: center;
-   
 }
