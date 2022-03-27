@@ -6,15 +6,15 @@ body{
 .formposition{
  position: relative;
  float: right;
- padding: 0.4%;
+ 
 }
 
 .formpositionSU{
-    position: absolute;
+position: absolute;
 left: 50%;
 top: 50%;
 transform: translate(-50%, -50%);
-padding: 10px;
+
 }
 
 .b3{
