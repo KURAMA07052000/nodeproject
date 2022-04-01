@@ -1,70 +1,57 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="styles/styleslogin.css">
     <title>Login</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="styles/stylesheetlogin.css">
-    
 </head>
-
 <body>
 
-    <br>
-    <br>
-    <div class="formposition">
-        <div class="b3">
-            <img class="welcomeimage" src="images/welcomeFamily.png">
-            <form action="" id="myForm">
-                <div class="form-group">
-                    <label for="email"><b>Username/Email:</b></label>
-                    <input type="email" id="eMail" name="email">
-                </div>
-                <br>
-                <div class="form-group">
-                    <label for="password"><b>Password:</b></label>
-                    <input type="password" id="password" name="password">
-                </div>
+    <div class="container">
+        <img class="welcomeimage" src="images/welcomeFamily.png">
+        <div class="forms">
+            <div class="form login">
+                <span class="title"></span>
 
-                <ul class="a">
-                    <li>Must have 6 charcters </li>
-                    <li>Must have 1 capital letter</li>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Enter your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
 
-                </ul>
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Remember me</label>
+                        </div>
 
-                <button type="submit" class="buttonstyle1">Login</button>
-                <br>
-                <div class="bottomform">
-                    <a href="signup.html" style="color: rgb(0, 0, 0);"><i><u>Don't have an account?</u></i></a>
-                    <br>
-                    <a href="" style="color: rgb(0, 0, 0);"><i><u>Continue as guest</u></i></a>
+                        <a href="#" class="text">Forgot password?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="button" value="Login Now">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Not a member?
+                        <a href="registration.html" class="text signup-link">Signup now</a>
+                    </span>
                 </div>
-            </form>
+            </div>
         </div>
-
-        <script>
-            var myForm = document.getElementById('myForm');
-
-            myForm.addEventListener("submit", function (e) {
-
-                e.preventDefault()
-
-
-                var Email = document.getElementById('eMail').value = "Submitted Email";
-                let Password = document.getElementById('password').value = "Susbmitted Password";
-
-
-                console.log(Email)
-                console.log(Password)
-
-            })
-        </script>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
