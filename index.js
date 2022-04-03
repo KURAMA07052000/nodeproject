@@ -5,7 +5,11 @@ const public = path.join(__dirname, 'public');
 app.use(express.static(public));
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, './public/Login.html'));
+    res.sendFile(path.join(public, 'Login.html'));
+})
+
+app.get('/register', function (req, res) {
+    res.sendFile(path.join(public, 'registration.html'));
 })
 
 app.use(function (req, res) {
