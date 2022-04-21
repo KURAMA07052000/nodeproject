@@ -1,10 +1,15 @@
 const express = require('express');
 const app = express();
+
+
 app.use(express.urlencoded({ extended: false }));
 
 const path = require('path');
 const public = path.join(__dirname, 'public');
 app.use(express.static(public));
+
+app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+app.use('/css', express.static(__dirname + '/Public/styles/style.css'));  
 
 const mustache = require('mustache-express');
 app.engine('mustache', mustache());
