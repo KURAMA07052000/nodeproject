@@ -13,4 +13,11 @@ exports.landing_page = function (req, res) {
     .catch((err) => {
       console.log("promise rejected", err);
     });
+    
+};
+
+exports.about_page = function (req, res) {
+  res.render("about", { 
+  title: "About",
+});
 };
