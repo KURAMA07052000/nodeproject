@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/webappController.js');
 router.get('/', function(req, res) {
-    res.redirect('/Login.html');
+    res.redirect('/login.html');
 })
 router.get('/registration', function(req, res) {
     res.redirect('/registration.html');
