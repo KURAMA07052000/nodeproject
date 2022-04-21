@@ -11,6 +11,7 @@ const controller = require('../controllers/webappController.js');
 //  })
 
 router.get("/", controller.landing_page);
+
 router.use(function(req, res) {
     res.status(404);
     res.type('text/plain');

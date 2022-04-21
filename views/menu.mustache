@@ -1,26 +1,43 @@
 <html>
-    <head>
-        {{>header}}
-    </head>
-    <body>
-        {{>navbar}}
-        {{#entries}}
-        
-            <div>
-                <h4>{{dish_name}}</h4>
-                <p>
-                    {{contents}}
-                </p>
-                <div>
-                    <p>Written by {{author}} on {{published}}</p>
-                </div>
-            </div>
-            <hr>
-        {{/entries}}
-        {{^entries}}
-            No entries yet.
-        {{/entries}}
-        {{>footer}}
-        <script src="navbar.js"></script>
-    </body>
+
+<head>
+  {{>header}}
+</head>
+
+<body>
+  {{>navbaruser}}
+  <div class="wrapper"></div>
+  {{#entries}}
+
+  <div class="forum_post">
+    <div>
+      <div class="container_copy">
+        <h1>
+          <p>{{meal}}</h4>
+          </p>
+        </h1>
+      </div>
+      <div class="des">
+        <p>
+          {{ingredients}}
+        </p>
+
+        <h3>
+          <p>{{description}}</p>
+          <p>{{price}}</p>
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+  {{/entries}}
+
+  {{^entries}}
+  No entries yet.
+  {{/entries}}
+  {{>footer}}
+  <script src="navbar.js"></script>
+</body>
+
 </html>
