@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     height: 100%;
     width: 100%;
 }
@@ -73,7 +74,7 @@ nav {
         overflow-x: hidden;
     }
 
-    nav{
+    nav {
         overflow: auto;
     }
 
@@ -99,7 +100,7 @@ nav {
         display: block;
     }
 
-    
+
 }
 
 .nav-active {
@@ -180,8 +181,8 @@ footer {
 .socials a:hover i {
     color: rgb(255, 132, 0);
 }
-F
-.footer-bottom {
+
+F .footer-bottom {
     background: #000;
     width: 100%;
     padding: 20px;
@@ -238,89 +239,96 @@ F
         margin-bottom: 20px;
     }
 }
-    /*end of navbar */
 
-    /*cards*/
-    .wrapper {
-        height: 100%;
-        width: 100%;
-        /* height: 100vh; */
-        padding-top: 5%;
-        
-      }
-      
-      .menu_post {
-        position: relative;
-        margin: 25px 0px 25px 0px;
-        padding: 0rem 2rem 2rem 2rem;
-        background: #fff;
-        max-width: 1100px;
-        border-radius: 10px;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%, -50%); 
-        box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
-        
-      }
-      
-      
-      h3 {
-        margin: 0 0 0.5rem 0;
-        color: #999;
-        font-size: 1.25rem;
-        text-align: right;
-        font-family: 'Poppins', sans-serif;
-        
-      }
-      
-      h1 {
-        margin: 0 0 1rem 0;
-        font-size: 2.5rem;
-        letter-spacing: 0.5px;
-        color: #333;
-        text-align: center;
-        font-family: 'Fjalla One', sans-serif;
-      }
-      
-      p {
-        margin: 0 0 4.5rem 0;
-        font-size: 1.5rem;
-        color: #333;
-      }
-      
-      .myBtn {
-        border: none;
-        outline: none;
-        background: linear-gradient(90deg, #ff66f5, #b134f5);
-        padding: 1.5rem 2rem;
-        border-radius: 50px;
-        color: white;
-        font-size: 1.2rem;
-        font-style: oblique;
-        box-shadow: 1px 10px 2rem rgba(0, 0, 0, 0.2);
-        transition: all .2s ease-in;
-        text-decoration: none;
-      }
-      
-      .btn_primary:hover {
-        box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
-      }
-      
-      .myBtn{
-        border-radius: none;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        
+/*end of navbar */
+
+/*cards*/
+.wrapper {
+    height: 100%;
+    width: 100%;
+    /* height: 100vh; */
+    padding-top: 5%;
+
+}
+
+.menu_post {
+    position: relative;
+    margin: 25px 0px 25px 0px;
+    padding: 0rem 2rem 2rem 2rem;
+    background: #fff;
+    max-width: 1100px;
+    border-radius: 10px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+
+}
+
+
+h3 {
+    margin: 0 0 0.5rem 0;
+    color: #999;
+    font-size: 1.25rem;
+    text-align: right;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+h1 {
+    margin: 0 0 1rem 0;
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+    color: #333;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0 0 4.5rem 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.myBtn {
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, #ff66f5, #b134f5);
+    padding: 1.5rem 2rem;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.2rem;
+    font-style: oblique;
+    box-shadow: 1px 10px 2rem rgba(0, 0, 0, 0.2);
+    transition: all .2s ease-in;
+    text-decoration: none;
+}
+
+.btn_primary:hover {
+    box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
+}
+
+.myBtn {
+    border-radius: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+@media screen and (max-width:678px) {
+
+    .menu_post {
+        border-radius: 25px;
     }
 
-    @media screen and (max-width:678px) {
 
-        .menu_post{
-            border-radius: 25px;
-        }
-    
-        
-    }
+}
 
-    /*end of cards*/
+/*end of cards*/
+
+/*About page slideshow */
+.mySlides {display:none;}
+
+/*end of slideshow*/
