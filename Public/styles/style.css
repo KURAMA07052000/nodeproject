@@ -178,9 +178,9 @@ footer {
 }
 
 .socials a:hover i {
-    color: aqua;
+    color: rgb(255, 132, 0);
 }
-
+F
 .footer-bottom {
     background: #000;
     width: 100%;
@@ -249,10 +249,10 @@ footer {
         
       }
       
-      .forum_post {
+      .menu_post {
         position: relative;
         margin: 25px 0px 25px 0px;
-        padding: 2rem 2rem 2rem 2rem;
+        padding: 0rem 2rem 2rem 2rem;
         background: #fff;
         max-width: 1100px;
         border-radius: 10px;
@@ -267,6 +267,8 @@ footer {
         margin: 0 0 0.5rem 0;
         color: #999;
         font-size: 1.25rem;
+        text-align: right;
+        
       }
       
       h1 {
@@ -274,6 +276,7 @@ footer {
         font-size: 2.5rem;
         letter-spacing: 0.5px;
         color: #333;
+        text-align: center;
       }
       
       p {
@@ -305,6 +308,15 @@ footer {
         display: block;
         margin-left: auto;
         margin-right: auto;
+        
+    }
+
+    @media screen and (max-width:678px) {
+
+        .menu_post{
+            border-radius: 25px;
+        }
+    
         
     }
 

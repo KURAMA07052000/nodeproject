@@ -13,16 +13,16 @@ class webMenu {
             meal: 'Pizza',
             Ingredients: 'mozerella, flour, salt, tomatoe, peperoni',
             price: '18.50',
-            description: 'dfijvlk'
+            description: 'testing'
         });
         //for later debugging
         console.log('db meal enntry 1');
 
         this.db.insert({
-            meal: 'Pizza',
-            Ingredients: 'mozerella, flour, salt, tomatoe, peperoni',
-            price: '18.50',
-            description: 'dfijvlk'
+            meal: 'French Fries',
+            Ingredients: 'potatoes, salt, oil, paprika',
+            price: '12',
+            description: 'A flavourful explosion'
         });
         //for later debugging
         console.log('db meal entry 2');
