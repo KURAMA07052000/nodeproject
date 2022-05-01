@@ -407,4 +407,11 @@ p {
    transition: all 400ms ease-in-out;
 }
 
+.luffy {
+    border-radius: 20em;
+    background-color: #E09165;
+    border: none;
+    padding: 5px;
+    width: 25%;
+}
 /* end of about us cards*/
