@@ -16,7 +16,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: #E09165;
+    background-color: #f58953;
     font-family: 'Sansita', sans-serif;
     color: white;
     text-transform: uppercase;
@@ -123,7 +123,7 @@ nav.fill ul li a:hover:after {
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: #E09165;
+        background-color: #f58953;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -138,6 +138,13 @@ nav.fill ul li a:hover:after {
 
     .burger {
         display: block;
+    }
+
+    .buttonnav {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
     }
 
 
@@ -269,7 +276,7 @@ F .footer-bottom {
 }
 
 .footer-menu ul li a:hover {
-    color: #E09165;
+    color: #f58953;
 }
 
 @media (max-width:500px) {
@@ -418,7 +425,7 @@ p {
 .about-item hr{
     width: 46px;
     height: 3px;
-    background-color: #E09165;
+    background-color: #f58953;
     margin: 0 auto;
     border: nome;
 }
@@ -428,7 +435,7 @@ p {
     font-family: 'Poppins', sans-serif;
 }
 .about-item:hover{
-    background-color: #E09165;
+    background-color: #f58953;
 }
 
 .about-item:hover i,
@@ -453,7 +460,7 @@ p {
 
 .luffy {
     border-radius: 20em;
-    background-color: #E09165;
+    background-color: #f58953;
     border: none;
     padding: 5px;
     width: 25%;

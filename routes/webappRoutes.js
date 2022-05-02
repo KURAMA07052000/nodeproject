@@ -19,6 +19,8 @@ router.get("/location", controller.location_page);
 
 router.get('/login', controller.show_login);
 
+router.post('/login', login, controller.handle_login);
+
 router.get("/Registration", controller.show_register_page);
 
 router.post('/Registration', controller.post_new_user);
@@ -30,9 +32,9 @@ router.use(function (req, res) {
     res.send('404 Not found.');
 })
 
-router.use(function (err, req, res, next) {
-    res.status(500);
-    res.type('text/plain');
-    res.send('Internal Server Error.');
-})
+// router.use(function (err, req, res, next) {
+//     res.status(500);
+//     res.type('text/plain');
+//     res.send('Internal Server Error.');
+// })
 module.exports = router;

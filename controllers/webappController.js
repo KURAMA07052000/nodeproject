@@ -35,7 +35,7 @@ exports.show_login = function (req, res) {
 
 exports.handle_login = function (req, res) {
   // res.redirect("/new");
-  res.render("adminPage", {
+  res.render("", {
     title: "Admin Page",
     user: "user"
   });
@@ -50,7 +50,7 @@ exports.post_new_user = function (req, res) {
   const password = req.body.pass;
 
   if (!user || !password) {
-    res.send(401, "no user or no password");
+    res.status(401).send("cannot find user or password")
     return;
   }
   userDao.lookup(user, function (err, u) {
