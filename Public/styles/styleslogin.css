@@ -88,6 +88,28 @@ body{
     margin-top: 30px;
 }
 
+.input-field-button{
+   display: flex;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 10px;
+   padding-left: 40px;
+   padding-right: 40px;
+   margin-top: 10px;
+   background-color: #E09165;
+   border-radius: 5rem;
+   border-style: none;
+   color: white;
+   font-size: large;
+  
+}
+
+.input-field-button:hover{
+    color: #000000;
+    background-color: #ccc;
+    transition: 1.5s;
+}
+
 .input-field input{
     position: absolute;
     height: 100%;

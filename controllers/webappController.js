@@ -35,7 +35,7 @@ exports.show_login = function (req, res) {
 
 exports.handle_login = function (req, res) {
   // res.redirect("/new");
-  res.render("", {
+  res.render("adminPage", {
     title: "Admin Page",
     user: "user"
   });

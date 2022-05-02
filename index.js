@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-
+require('dotenv').config()
  app.use(express.urlencoded({ extended: false }));
  const cookieParser = require('cookie-parser')
  app.use(cookieParser())
