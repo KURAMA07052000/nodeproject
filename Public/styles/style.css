@@ -151,7 +151,7 @@ nav.fill ul li a:hover:after {
 
 /* end of navbar */
 
-/*Navbar*/
+/*footer*/
 footer {
     position: relative;
     bottom: 0;
@@ -238,7 +238,7 @@ F .footer-bottom {
 }
 
 .footer-bottom p a {
-    color: #44bae8;
+    color: #fa691b;
     font-size: 16px;
     text-decoration: none;
 }
@@ -269,7 +269,7 @@ F .footer-bottom {
 }
 
 .footer-menu ul li a:hover {
-    color: #27bcda;
+    color: #E09165;
 }
 
 @media (max-width:500px) {
@@ -280,7 +280,7 @@ F .footer-bottom {
     }
 }
 
-/*end of navbar */
+/*end of footer */
 
 /*cards*/
 .wrapper {
@@ -398,9 +398,9 @@ p {
 .about-item{
   margin-bottom: 20px;
   margin-top: 20px;
-  background-color: white;
+  background-color: rgb(234, 230, 230);
   padding: 80px, 30px;
-  box-shadow: 0 0 9px rgba(0,0,0 .6);
+  box-shadow: 4px 5px 10px #888888;
 }
 
 .about-item i{

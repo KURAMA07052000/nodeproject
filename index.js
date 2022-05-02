@@ -20,6 +20,6 @@ app.set('view engine', 'mustache');
 const router = require('./routes/webappRoutes');
 app.use('/', router); 
 
-app.listen(3000, () => {
-    console.log('Server started on port 3000. Ctrl^c to quit.');
+app.listen(5000, () => {
+    console.log('Server started on port 5000. Ctrl^c to quit.');
 }) 
