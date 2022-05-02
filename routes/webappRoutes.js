@@ -15,6 +15,8 @@ router.get("/", controller.landing_page);
 
 router.get("/about", controller.about_page);
 
+router.get("/location", controller.location_page);
+
 router.get('/login', controller.show_login);
 
 router.get("/Registration", controller.show_register_page);

@@ -23,6 +23,12 @@ exports.about_page = function (req, res) {
 });
 };
 
+exports.location_page = function (req, res) {
+  res.render("location", { 
+  title: "Location",
+});
+};
+
 exports.show_login = function (req, res) {
   res.render("user/Login");
 };
