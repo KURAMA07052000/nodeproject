@@ -345,12 +345,14 @@ p {
     text-align: center;
     color: black;
     font-weight: bold;
+    font-family: 'Poppins', sans-serif;
 }
 
 .about-1 p{
     text-align: center;
     padding: 3px;
     color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
 }
 
 .about-item{
@@ -370,6 +372,7 @@ p {
 .about-item h6{
     font-size: 25px;
     margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .about-item hr{
@@ -382,6 +385,7 @@ p {
 
 .about-item p{
     margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 .about-item:hover{
     background-color: #E09165;
@@ -413,5 +417,14 @@ p {
     border: none;
     padding: 5px;
     width: 25%;
+}
+
+.luffy:hover{
+    background-color: rgb(118, 118, 118);
+    color: #fff;
+}
+
+.luffy a:hover{
+    color: #fff;
 }
 /* end of about us cards*/
