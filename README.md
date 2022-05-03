@@ -10,9 +10,11 @@
 
 2. Install node.js
 
-3. Install dependencies using following command lines:
+3. Install dependencies using following command lines (also ensure you have downloaded node.js to your computer):
 
    npm install express
+
+   npm install nedb --save 
 
    npm i mustache-express
 
