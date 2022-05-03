@@ -68,7 +68,7 @@ exports.loggedIn_landing = function (req, res) {
   db.getAllEntries()
     .then((list) => {
       res.render("adminPage", {
-        title: "Admin",
+        title: "Admin page",
         user: "user",
         entries: list,
       });
@@ -91,15 +91,16 @@ exports.post_new_entry = function (req, res) {
     response.status(400).send("New meal must have a meal name.");
     return;
   }
-  db.addEntry(req.body.meal, req.body.Ingreients, req.body.description, req.body.price);
+  db.addEntry(req.body.meal, req.body.Ingredients, req.body.description, req.body.price);
+  res.redirect("adminPage")
 };
 
 exports.show_user_entries = function (req, res) {
-  let user = req.params.meal;
+  let user = req.params.author;
   db.getEntriesByUser(user)
     .then((entries) => {
       res.render("adminPage", {
-        title: "webApp",
+        title: "Admin page",
         user: "user",
         entries: entries,
       });

@@ -64,6 +64,19 @@ class webMenu {
         }) 
     }       
 
+    getEntriesByUser(authorName) {
+        return new Promise((resolve, reject) => {
+            this.db.find({ 'author': authorName }, function(err, entries) {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(entries);
+            console.log('getEntriesByUser returns: ', entries);
+        }
+    })
+})
+}
+
 
 
 }
