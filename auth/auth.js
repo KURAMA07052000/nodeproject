@@ -13,7 +13,7 @@ exports.login = function (req, res,next) {
     }
     if (!user) {
       console.log("user ", username, " not found");
-      return res.render("user/register");
+      return res.render("user/Registration");
     }
     //compare provided password with stored password
     bcrypt.compare(password, user.password, function (err, result) {

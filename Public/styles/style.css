@@ -147,7 +147,13 @@ nav.fill ul li a:hover:after {
         width: 100%;
     }
 
-
+    .buttonadmin1{
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
 }
 
 .nav-active {

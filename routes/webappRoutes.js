@@ -24,7 +24,16 @@ router.post('/login', login, controller.handle_login);
 router.get("/Registration", controller.show_register_page);
 
 router.post('/Registration', controller.post_new_user);
+
 router.get("/adminPage",verify, controller.loggedIn_landing);
+
+router.get('/new',verify,controller.show_new_entries);
+
+router.post('/new', verify, controller.post_new_entry);
+
+router.get('/posts/:meal', controller.show_user_entries);
+
+router.get("/logout", controller.logout);
 
 router.use(function (req, res) {
     res.status(404);

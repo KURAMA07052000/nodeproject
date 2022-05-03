@@ -9,6 +9,31 @@
   {{>navbaradmin}}
  
 
+<div class="text-right" style="margin-bottom: 1em;">
+
+
+</div>
+<div class="text-center">
+<a href="/new" class="buttonadmin1" style="border-radius: 20em; background-color: black; border: none; padding: 5px; color: white;">
+Add a new Meal to the Menu
+</a>
+</div>
+{{#entries}}
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">{{meal}}</h4>
+    <p class="card-text">
+      {{description}}
+     </p>
+<div class="card-footer">
+{{price}}
+</div>
+</div>
+{{/entries}}
+
+{{^entries}}
+No entries yet.
+{{/entries}}
 {{>footer}}
 <script src="navbar.js"></script>
          

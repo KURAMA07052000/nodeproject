@@ -34,7 +34,7 @@ exports.show_login = function (req, res) {
 };
 
 exports.handle_login = function (req, res) {
-  // res.redirect("/new");
+ 
   res.render("adminPage", {
     title: "Admin Page",
     user: "user"
@@ -75,6 +75,39 @@ exports.loggedIn_landing = function (req, res) {
     })
     .catch((err) => {
       console.log("promise rejected", err);
+    });
+};
+
+exports.show_new_entries = function (req, res) {
+  res.render("newMeal", {
+    title: "adminAddMeal",
+    user: "user",
+  });
+};
+
+exports.post_new_entry = function (req, res) {
+  console.log("processing post-new_entry controller");
+  if (!req.body.meal) {
+    response.status(400).send("New meal must have a meal name.");
+    return;
+  }
+  db.addEntry(req.body.meal, req.body.Ingreients, req.body.description, req.body.price);
+  res.redirect("/loggedIn");
+};
+
+exports.show_user_entries = function (req, res) {
+  let user = req.params.meal;
+  db.getEntriesByUser(user)
+    .then((entries) => {
+      res.render("adminPage", {
+        title: "webApp",
+        user: "user",
+        entries: entries,
+      });
+    })
+    .catch((err) => {
+      console.log("Error: ");
+      console.log(JSON.stringify(err));
     });
 };
 
