@@ -1,6 +1,6 @@
 -----------------------------------------------------------How to run site------------------------------------------------------------
 
-1. open VCode and clone repositry with these 3 command lines in a new terminal:
+1. open VSCode and clone repositry with these 3 command lines in a new terminal:
     
     git init
 
