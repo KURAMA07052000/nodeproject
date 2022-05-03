@@ -92,7 +92,6 @@ exports.post_new_entry = function (req, res) {
     return;
   }
   db.addEntry(req.body.meal, req.body.Ingreients, req.body.description, req.body.price);
-  res.redirect("/loggedIn");
 };
 
 exports.show_user_entries = function (req, res) {

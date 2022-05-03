@@ -35,6 +35,8 @@ router.get('/posts/:meal', controller.show_user_entries);
 
 router.get("/logout", controller.logout);
 
+
+
 router.use(function (req, res) {
     res.status(404);
     res.type('text/plain');

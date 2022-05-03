@@ -18,22 +18,37 @@
 Add a new Meal to the Menu
 </a>
 </div>
-{{#entries}}
-<div class="card">
-  <div class="card-body">
-    <h4 class="card-title">{{meal}}</h4>
-    <p class="card-text">
-      {{description}}
-     </p>
-<div class="card-footer">
-{{price}}
-</div>
-</div>
-{{/entries}}
+ <div class="wrapper">
+    {{#entries}}
 
-{{^entries}}
-No entries yet.
-{{/entries}}
+    <div class="menu_post">
+      <div>
+        <div class="container_copy">
+          <h1>
+            {{meal}}
+           
+          </h1>
+        </div>
+        <div class="des">
+          <p class="ingerdients">{{Ingredients}}
+          <br>
+          <br>
+           {{description}}</p>
+         
+          <h3 ><b>
+           
+            £ {{price}}
+          </b></h3>
+        
+      </div>
+    </div>
+  </div>
+
+  {{/entries}}
+
+  {{^entries}}
+  No entries yet.
+  {{/entries}}
 {{>footer}}
 <script src="navbar.js"></script>
          
