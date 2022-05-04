@@ -395,6 +395,37 @@ p {
     display: none;
 }
 
+.coupon {
+    max-width: 500px;
+    position: relative;
+    float: right;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.map {
+    border: 0;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    /* margin-top: 2%; */
+    
+    
+}
+
+@media screen and (max-width:678px) {
+
+   .coupon{
+    max-width: 450px;
+    margin-bottom: 4%;
+   }
+
+
+}
+
 /*end of slideshow*/
 
 /*about us*/
@@ -514,9 +545,9 @@ p {
 
 }
 
-.btnCreateMeal:hover{
-  background-color: #000;
-  color: #F6B352;
+.btnCreateMeal:hover {
+    background-color: #000;
+    color: #F6B352;
 }
 
 .addNewMeal {
@@ -537,7 +568,7 @@ p {
 .form-group {
     width: 100% margin-top 70px;
     font-size: 20px;
-    
+
     border: none;
     border-bottom: solid 3px;
 
@@ -548,7 +579,7 @@ p {
     width: 100%;
     padding: 5px;
     font-size: 18px;
-    
+
 }
 
 
