@@ -19,6 +19,7 @@ class UserDAO {
             user: 'Kevin',
             password:
             '$2b$10$I82WRFuGghOMjtu3LLZW9OAMrmYOlMZjEEkh.vx.K2MM05iu5hY2C'
+            
         });
         this.db.insert({
             user: 'Sam',
@@ -26,12 +27,14 @@ class UserDAO {
         });
         return this;
     }
-    create(username, password) {
+    create(username, password, firstName, lastName) {
         const that = this;
         bcrypt.hash(password, saltRounds).then(function(hash) {
             var entry = {
                 user: username,
                 password: hash,
+                firstName: firstName,
+                lastName: lastName
             };
             that.db.insert(entry, function (err) {
             if (err) {
