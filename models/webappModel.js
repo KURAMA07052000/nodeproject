@@ -150,7 +150,7 @@ class webMenu {
     }
 
     //update entries within the menu database
-    updateMealData(meal, Ingredients, description, price, meal_time,) {
+    updateMealData(_id, meal, Ingredients, description, price, meal_time,) {
         var entry = {
             meal: meal,
             Ingredients: Ingredients,

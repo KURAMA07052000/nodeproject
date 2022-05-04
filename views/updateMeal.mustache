@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    {{>header}}
+    <title>{{title}}</title>
+</head>
+
+<body>
+    {{>navbaradmin}}
+
+
+
+
+    <div class="text-right" style="margin-bottom: 1em; margin-top: 5%;">
+
+
+    </div>
+    <form class="addNewMeal" method="post" role="form" action="/updateMeal">
+
+        {{#entries}}
+        <h2 style="font-family: 'Poppins', sans-serif; display: block; margin-left:auot; margin-right:auto;">CREATE A
+            NEW MEAL</h2>
+        <div class="form-group">
+
+
+            <input type="text" id="_id" name="_id" value={{_id}} required>
+        </div>
+        <div class="form-group">
+            <label for="meal">New Meal Name:</label>
+            <input type="text" id="meal" name="meal" value={{meal}} placeholder="Enter new Meal" required>
+        </div>
+        <div class="form-group">
+            <label for="Ingredients">New Ingredients:</label>
+            <input type="text" id="Ingredients" name="Ingredients" value={{Ingredients}}
+                placeholder="Enter all the ingredients used" required>
+        </div>
+        <div class="form-group">
+            <label for="description">New Description:</label>
+            <textarea id="description" name="description" value={{description}}
+                placeholder="Enter your comments here." rows="3" required>
+</textarea>
+        </div>
+        <div class="form-group">
+            <label for="price">New Price</label>
+            <input type="text" id="price" name="price"value={{price}} placeholder="Enter price of meal" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="meals">Choose a new meal time:</label>
+            <select id="meal_time" name="meal_time">
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create new Meal" class="btnCreateMeal">
+        </div>
+
+        {{/entries}}
+    </form>
+
+    {{>footer}}
+    <script src="navbar.js"></script>
+
+</body>
+
+</html>

@@ -17,6 +17,14 @@ exports.landing_page = function (req, res) {
     
 };
 
+exports.account_page = function (req, res) {
+  
+  res.render("account", { 
+    title: "Admin Account Page",
+    user: "user"
+  });
+};
+
 exports.dinner_menu_page = function (req, res) {
   db.getAllDinnerEntries()
     .then((list) => {
@@ -49,7 +57,7 @@ exports.show_login = function (req, res) {
 
 exports.handle_login = function (req, res) {
  
-  res.render("adminPage", {
+  res.render("account", {
     title: "Admin Page",
     user: "user"
   });
@@ -125,9 +133,26 @@ exports.show_user_entries = function (req, res) {
     });
 };
 
+exports.show_update_entry = function (req,res) {
+  db.updateMealData(req.body._id, req.body.meal, req.body.Ingredients, req.body.description, req.body.price, req.body.meal_time);
+  db.getAllEntries()
+  .then((entries) => {
+  res.render("UpdateMeal", {
+    title: "Admin Update Meal",
+    user: "user",
+    entries: entries,
+  });
+})
+.catch((err) => {
+  console.log("Error: ");
+  console.log(JSON.stringify(err));
+});
+};
+  
+
 exports.update_entry = function (req,res) {
-  db.updateMealData(req.body.meal, req.body.Ingredients, req.body.description, req.body.price, req.body.meal_time);
-  res.redirect("adminPage");
+  db.updateMealData(req.body._id, req.body.meal, req.body.Ingredients, req.body.description, req.body.price, req.body.meal_time);
+  res.redirect("accountPage");
 }
 
 exports.delete_entry = function (req,res) {

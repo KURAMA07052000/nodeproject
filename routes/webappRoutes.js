@@ -13,6 +13,7 @@ const {verify} = require('../auth/auth')
 
 router.get("/", controller.landing_page);
 
+
 router.get("/dinner", controller.dinner_menu_page);
 
 router.get("/about", controller.about_page);
@@ -29,9 +30,17 @@ router.post('/Registration', controller.post_new_user);
 
 router.get("/adminPage",verify, controller.loggedIn_landing);
 
+router.get("/account", verify, controller.account_page);
+
 router.get('/new',verify,controller.show_new_entries);
 
 router.post('/new', verify, controller.post_new_entry);
+
+router.post('/delete', verify, controller.delete_entry);
+
+router.post('/updateMeal', verify, controller.update_entry);
+
+router.get('/updateMeal', verify, controller.show_update_entry);
 
 router.get('/posts/:meal', controller.show_user_entries);
 
@@ -39,11 +48,11 @@ router.get("/logout", controller.logout);
 
 
 
-router.use(function (req, res) {
-    res.status(404);
-    res.type('text/plain');
-    res.send('404 Not found.');
-})
+// router.use(function (req, res) {
+//     res.status(404);
+//     res.type('text/plain');
+//     res.send('404 Not found.');
+// })
 
 // router.use(function (err, req, res, next) {
 //     res.status(500);
