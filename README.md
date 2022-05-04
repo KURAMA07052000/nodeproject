@@ -1,10 +1,12 @@
 -----------------------------------------------------------How to run site------------------------------------------------------------
 
 1. open VSCode and clone repositry with these 3 command lines in a new terminal:
+
+*sidenote: between main and assessment chose assessment*
     
     git init
 
-    git clone 
+    git clone https://github.com/KURAMA07052000/ASSESSMENT_KEVINURAMA_WEBDEV2.git
 
     cd 'WEBDEV CW2'
 
