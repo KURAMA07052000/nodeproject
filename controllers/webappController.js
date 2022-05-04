@@ -111,6 +111,16 @@ exports.show_user_entries = function (req, res) {
     });
 };
 
+exports.update_entry = function (req,res) {
+  db.updateMealData(req.body.meal, req.body.Ingredients, req.body.description, req.body.price);
+  res.redirect("adminPage");
+}
+
+exports.delete_entry = function (req,res) {
+  db.deleteMeal(req.body._id);
+  res.redirect("adminPage");
+}
+
 exports.logout = function (req, res) {
   res.clearCookie("jwt").status(200).redirect("/");
 };
