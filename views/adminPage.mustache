@@ -7,18 +7,19 @@
 
 <body>
   {{>navbaradmin}}
- 
-
-<div class="text-right" style="margin-bottom: 1em;">
 
 
-</div>
-<div class="text-center">
-<a href="/new" class="buttonadmin1" style="border-radius: 20em; background-color: black; border: none; padding: 5px; color: white; margin-botton:5%">
-Add a new Meal to the Menu
-</a>
-</div>
- <div class="wrapper">
+  <div class="text-right" style="margin-bottom: 1em;">
+
+
+  </div>
+  <div class="text-center">
+    <a href="/new" class="buttonadmin1"
+      style="border-radius: 20em; background-color: black; border: none; padding: 5px; color: white; margin-bottom:5%">
+      Add a new Meal to the Menu
+    </a>
+  </div>
+  <div class="wrapper">
     {{#entries}}
 
     <div class="menu_post">
@@ -26,34 +27,35 @@ Add a new Meal to the Menu
         <div class="container_copy">
           <h1>
             {{meal}}
-           
+
           </h1>
         </div>
         <div class="des">
           <p class="ingerdients">{{Ingredients}}
-          <br>
-          <br>
-           {{description}}</p>
+            <br>
+            <br>
+            {{description}}
+          </p>
 
           <i style="color: #F6B352"> {{meal_time}} </i>
-         
-          <h3 ><b>
-           
-            £ {{price}}
-          </b></h3>
-        
+
+          <h3><b>
+
+              £ {{price}}
+            </b></h3>
+
+        </div>
       </div>
     </div>
-  </div>
 
-  {{/entries}}
+    {{/entries}}
 
-  {{^entries}}
-  No entries yet.
-  {{/entries}}
-{{>footer}}
-<script src="navbar.js"></script>
-         
+    {{^entries}}
+    No entries yet.
+    {{/entries}}
+    {{>footer}}
+    <script src="navbar.js"></script>
+
 </body>
 
 </html>

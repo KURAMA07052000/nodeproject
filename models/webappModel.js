@@ -29,7 +29,30 @@ class webMenu {
         });
 
         console.log('db meal entry 2');
+
+        this.db.insert({
+            meal: 'Pasta',
+            Ingredients: 'Tomatoes, garlic, salt, pepper, paprika, pasta',
+            price: '9.50',
+            description: 'A flavourful explosion',
+            meal_time: 'lunch'
+        });
+
+        console.log('db meal entry 3');
+
+        this.db.insert({
+            meal: 'Spaghetti',
+            Ingredients: 'Tomatoes, garlic, salt, pepper, paprika, spaghetti',
+            price: '10',
+            description: 'A flavourful explosion',
+            meal_time: 'dinner'
+        });
+
+        console.log('db meal entry 4');
+    
     }
+
+    
 
     //gets all the data for menu 
     getAllEntries() {
