@@ -14,7 +14,8 @@ class webMenu {
             meal: 'Pizza',
             Ingredients: 'mozerella, flour, salt, tomatoe, peperoni',
             price: '18.50',
-            description: 'testing'
+            description: 'testing',
+            meal_time: 'dinner'
         });
 
         console.log('db meal enntry 1');
@@ -23,7 +24,8 @@ class webMenu {
             meal: 'French Fries',
             Ingredients: 'potatoes, salt, oil, paprika',
             price: '12',
-            description: 'A flavourful explosion'
+            description: 'A flavourful explosion',
+            meal_time: 'lunch'
         });
 
         console.log('db meal entry 2');
@@ -48,13 +50,56 @@ class webMenu {
         })
     }
 
+    //gets all the data for lunch menu 
+    getAllLunchEntries() {
+
+        return new Promise((resolve, reject) => {
+
+            this.db.find({ meal_time: 'lunch' }, function (err, entries) {
+
+                if (err) {
+                    reject(err);
+
+                } 
+                
+                else {
+                    resolve(entries);
+
+                    console.log('function all lunch() returns: ', entries);
+                }
+            })
+        })
+    }
+
+    //gets all the data for the dinner menu 
+    getAllDinnerEntries() {
+
+        return new Promise((resolve, reject) => {
+
+            this.db.find({ meal_time: 'dinner' }, function (err, entries) {
+
+                if (err) {
+                    reject(err);
+
+                } 
+                
+                else {
+                    resolve(entries);
+
+                    console.log('function all dinner () returns: ', entries);
+                }
+            })
+        })
+    }
+
     //adds new entry in to the menu database
-    addEntry(meal, Ingredients, description, price) {
+    addEntry(meal, Ingredients, description, price, meal_time) {
         var entry = {
             meal: meal,
             Ingredients: Ingredients,
             description: description,
             price: price,
+            meal_time: meal_time,
             published: new Date().toISOString().split('T')[0]
         }
         console.log('entry created', entry);
@@ -82,12 +127,13 @@ class webMenu {
     }
 
     //update entries within the menu database
-    updateMealData(meal, Ingredients, description, price) {
+    updateMealData(meal, Ingredients, description, price, meal_time,) {
         var entry = {
             meal: meal,
             Ingredients: Ingredients,
             description: description,
-            price: price
+            price: price,
+            meal_time: meal_time
         }
 
         this.db.update({ _id: _id },
@@ -96,7 +142,8 @@ class webMenu {
                     meal: meal,
                     Ingredients: Ingredients,
                     description: description,
-                    price: price
+                    price: price,
+                    meal_time: meal_time
                 }
             },
             {},

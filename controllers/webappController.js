@@ -4,10 +4,24 @@ const db = new webMenuDAO();
 db.init();
 
 exports.landing_page = function (req, res) {
-  db.getAllEntries()
+  db. getAllLunchEntries()
     .then((list) => {
-      res.render("menu", {
-        title: "Menu",
+      res.render("menuLunch", {
+        title: "Lunch Menu",
+        entries: list,
+      });
+    })
+    .catch((err) => {
+      console.log("promise rejected", err);
+    });
+    
+};
+
+exports.dinner_menu_page = function (req, res) {
+  db.getAllDinnerEntries()
+    .then((list) => {
+      res.render("menuDinner", {
+        title: "Dinner Menu",
         entries: list,
       });
     })
@@ -91,7 +105,7 @@ exports.post_new_entry = function (req, res) {
     response.status(400).send("New meal must have a meal name.");
     return;
   }
-  db.addEntry(req.body.meal, req.body.Ingredients, req.body.description, req.body.price);
+  db.addEntry(req.body.meal, req.body.Ingredients, req.body.description, req.body.price, req.body.meal_time);
   res.redirect("adminPage")
 };
 
@@ -112,7 +126,7 @@ exports.show_user_entries = function (req, res) {
 };
 
 exports.update_entry = function (req,res) {
-  db.updateMealData(req.body.meal, req.body.Ingredients, req.body.description, req.body.price);
+  db.updateMealData(req.body.meal, req.body.Ingredients, req.body.description, req.body.price, req.body.meal_time);
   res.redirect("adminPage");
 }
 

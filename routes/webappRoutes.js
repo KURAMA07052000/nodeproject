@@ -13,6 +13,8 @@ const {verify} = require('../auth/auth')
 
 router.get("/", controller.landing_page);
 
+router.get("/dinner", controller.dinner_menu_page);
+
 router.get("/about", controller.about_page);
 
 router.get("/location", controller.location_page);
