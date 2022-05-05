@@ -52,4 +52,16 @@
 
 5. I added a slideshow on my about page and redesigned the whole page as during implementtaion I found it may be more user inclusive.
 
-6. 
+6. In the account page I completely reworked it beacuse I didn't have time to implement update features
+
+------------------------------------------------------added functionality------------------------------------------------------------
+
+1. costumers have access to lunch and dinner pages
+
+2. customers have access to about page with a breif slide show and cards explaing mission, vission and achievments.
+
+3. customers also have access to location page with an imbeded map and contact us info
+
+4. There is a registration and login feature for admins
+
+5. They can add new entries, update esisting entries and delete current entries

@@ -15,7 +15,8 @@ class webMenu {
             Ingredients: 'mozerella, flour, salt, tomatoe, peperoni',
             price: '18.50',
             description: 'testing',
-            meal_time: 'dinner'
+            meal_time: 'dinner',
+            availability: 'available'
         });
 
         console.log('db meal enntry 1');
@@ -25,7 +26,8 @@ class webMenu {
             Ingredients: 'potatoes, salt, oil, paprika',
             price: '12',
             description: 'A flavourful explosion',
-            meal_time: 'lunch'
+            meal_time: 'lunch',
+            availability: 'available'
         });
 
         console.log('db meal entry 2');
@@ -35,7 +37,8 @@ class webMenu {
             Ingredients: 'Tomatoes, garlic, salt, pepper, paprika, pasta',
             price: '9.50',
             description: 'A flavourful explosion',
-            meal_time: 'lunch'
+            meal_time: 'lunch',
+            availability: 'available'
         });
 
         console.log('db meal entry 3');
@@ -45,7 +48,8 @@ class webMenu {
             Ingredients: 'Tomatoes, garlic, salt, pepper, paprika, spaghetti',
             price: '10',
             description: 'A flavourful explosion',
-            meal_time: 'dinner'
+            meal_time: 'dinner',
+            availability: 'available'
         });
 
         console.log('db meal entry 4');
@@ -67,7 +71,7 @@ class webMenu {
                 } else {
                     resolve(entries);
 
-                   // console.log('function all() returns: ', entries);
+                   console.log('function all() returns: ', entries);
                 }
             })
         })
@@ -116,13 +120,14 @@ class webMenu {
     }
 
     //adds new entry in to the menu database
-    addEntry(meal, Ingredients, description, price, meal_time) {
+    addEntry(meal, Ingredients, description, price, meal_time, availability) {
         var entry = {
             meal: meal,
             Ingredients: Ingredients,
             description: description,
             price: price,
             meal_time: meal_time,
+            availability: availability,
             published: new Date().toISOString().split('T')[0]
         }
         console.log('entry created', entry);
@@ -158,14 +163,8 @@ class webMenu {
     }
 
     //update entries within the menu database
-    updateMealData(_id, meal, Ingredients, description, price, meal_time, callback) {
-        // var entry = {
-        //     meal: meal,
-        //     Ingredients: Ingredients,
-        //     description: description,
-        //     price: price,
-        //     meal_time: meal_time
-        // }
+    updateMealData(_id, meal, Ingredients, description, price, meal_time, availability, callback) {
+       
         this.db.update({ _id: _id },
             {
                 $set: {
@@ -173,7 +172,8 @@ class webMenu {
                     Ingredients: Ingredients,
                     description: description,
                     price: price,
-                    meal_time: meal_time
+                    meal_time: meal_time,
+                    availability: availability
                 }
             },
             {},

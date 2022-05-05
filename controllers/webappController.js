@@ -114,7 +114,7 @@ exports.post_new_entry = function (req, res) {
     response.status(400).send("New meal must have a meal name.");
     return;
   }
-  db.addEntry(req.body.meal, req.body.Ingredients, req.body.description, req.body.price, req.body.meal_time);
+  db.addEntry(req.body.meal, req.body.Ingredients, req.body.description, req.body.price, req.body.meal_time, req.body.availability);
   res.redirect("adminPage")
 };
 
@@ -166,7 +166,7 @@ exports.show_update_entry = function (req, res) {
 exports.update_entry = function (req, res) {
   console.log(req.body._id, req.body.meal, req.body.Ingredients, req.body.description, req.body.price, req.body.meal_time);
   db.updateMealData(req.body._id, req.body.meal, req.body.Ingredients, req.body.description, req.body.price, req.body.meal_time);
-  //db.getAllEntries()
+  
   res.redirect("adminPage");
 }
 

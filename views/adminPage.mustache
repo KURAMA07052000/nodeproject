@@ -42,6 +42,8 @@
 
           <i style="color: #F6B352"> {{meal_time}} </i>
 
+          <i style="color: #50d7aa"> {{availability}} </i>
+
           <h3><b>
 
               £ {{price}}
@@ -93,9 +95,18 @@
               <div class="form-group1">
                 <label for="meals">Choose a new meal time:</label>
                 
-                <input type="meal_time" id="meal_time" name="meal_type" value="{{meal_time}}" placeholder="Choose new meal type" required>
+                <input type="text" id="meal_time" name="meal_time" value="{{meal_time}}" placeholder="Choose new meal type" required>
                 
               </div>
+
+              <!--<div class = "form-group">
+                <label for="availability">Availability:</label>
+                  <select id="meal_time" name="meal_time">
+                    <option value="available">Available</option>
+                    <option value="unavailable">Unavailable</option>
+                    
+                  </select>
+                  </div> -->
               <div class="buttonsforcards">
 
                 <ul>
