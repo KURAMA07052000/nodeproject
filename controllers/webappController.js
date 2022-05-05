@@ -53,6 +53,7 @@ exports.location_page = function (req, res) {
 
 exports.show_login = function (req, res) {
   res.render("user/Login");
+  console.log("user is logged in");
 };
 
 exports.handle_login = function (req, res) {

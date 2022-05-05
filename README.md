@@ -65,3 +65,10 @@
 4. There is a registration and login feature for admins
 
 5. They can add new entries, update esisting entries and delete current entries
+
+------------------------------------------------------use of deployed version------------------------------------------------------------
+
+
+
+
+----------------------------------------------------------------end----------------------------------------------------------------------
