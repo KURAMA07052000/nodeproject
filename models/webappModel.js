@@ -67,7 +67,7 @@ class webMenu {
                 } else {
                     resolve(entries);
 
-                    console.log('function all() returns: ', entries);
+                   // console.log('function all() returns: ', entries);
                 }
             })
         })
@@ -135,30 +135,37 @@ class webMenu {
         })
     }
 
+    
 
-    getEntriesByUser(authorName) {
+    //gets one entry
+    getOneEntries(_id, err) {
+
         return new Promise((resolve, reject) => {
-            this.db.find({ 'author': authorName }, function (err, entries) {
+
+            this.db.find({_id: _id}, function (err, entries) {
+
                 if (err) {
                     reject(err);
+
                 } else {
+                    
                     resolve(entries);
-                    console.log('getEntriesByUser returns: ', entries);
+
+                    console.log('function one entry() returns: ', entries);
                 }
             })
         })
     }
 
     //update entries within the menu database
-    updateMealData(_id, meal, Ingredients, description, price, meal_time,) {
-        var entry = {
-            meal: meal,
-            Ingredients: Ingredients,
-            description: description,
-            price: price,
-            meal_time: meal_time
-        }
-
+    updateMealData(_id, meal, Ingredients, description, price, meal_time, callback) {
+        // var entry = {
+        //     meal: meal,
+        //     Ingredients: Ingredients,
+        //     description: description,
+        //     price: price,
+        //     meal_time: meal_time
+        // }
         this.db.update({ _id: _id },
             {
                 $set: {
@@ -170,8 +177,8 @@ class webMenu {
                 }
             },
             {},
-            function (err, mealReplaced) {
-                console.log(mealReplaced + "updated");
+            function (err, newMeal) {
+                console.log(newMeal + "updated");
 
             });
         this.db.find({}).exec(function (err, docs) { console.log(docs); });

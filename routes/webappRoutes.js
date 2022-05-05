@@ -40,9 +40,8 @@ router.post('/delete', verify, controller.delete_entry);
 
 router.post('/updateMeal', verify, controller.update_entry);
 
-router.get('/updateMeal', verify, controller.show_update_entry);
+router.get('/updateMeal', verify, controller.loggedIn_landing);
 
-router.get('/posts/:meal', controller.show_user_entries);
 
 router.get("/logout", controller.logout);
 

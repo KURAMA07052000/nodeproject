@@ -4,10 +4,38 @@
     {{>header}}
     <title>{{title}}</title>
 </head>
+<style>
+    body {
+        background-color: #f7b42c;
+        background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
+
+    }
+
+    nav {
+
+        background-color: #f7b42c;
+        background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
+
+    }
+</style>
 
 <body>
     {{>navbaradmin}}
 
+    <div class="container">
+        <div class="row">
+            <div class="col align-self-start">
+                <div class="accountText">
+                    <p class="accountHeading">Welcome Administrator</p>
+
+                </div>
+            </div>
+            <div class="col align-self-start">
+
+                <img class="accountPlate" src="images/plate.png">
+            </div>
+        </div>
+    </div>
 
     {{>footer}}
     <script src="navbar.js"></script>

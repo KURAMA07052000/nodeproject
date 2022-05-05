@@ -49,6 +49,9 @@ nav {
     border: none;
     padding: 5px;
     width: 300%;
+    letter-spacing: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .burger {
@@ -309,6 +312,14 @@ F .footer-bottom {
 
 }
 
+.wrapperadmin {
+    height: 100%;
+    width: 100%;
+    /* height: 100vh; */
+    padding-top: 30%;
+
+}
+
 .menu_post {
     position: relative;
     margin: 25px 0px 25px 0px;
@@ -385,6 +396,14 @@ p {
         border-radius: 25px;
     }
 
+    .wrapperadmin {
+        height: 100%;
+        width: 100%;
+        /* height: 100vh; */
+        padding-top: 90%;
+    
+    }
+
 
 }
 
@@ -423,6 +442,11 @@ p {
     margin-bottom: 4%;
    }
 
+   .accountPlate{
+    
+    margin-right: 10%;
+    size: 450px;
+}
 
 }
 
@@ -603,6 +627,15 @@ p {
 
 }
 
+.form-group1 {
+    width: 100% margin-top 70px;
+    font-size: 20px;
+
+    border: none;
+   
+
+}
+
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -613,3 +646,27 @@ p {
 
 
 /*end of create Meal*/
+
+/*account page*/
+
+.accountPlate{
+    
+    margin-top: 2%;
+    size: 500px;
+}
+
+.accountHeading{
+    font-family: 'Pacifico', cursive; text-align: center;
+    text-align: center;
+    font-size: 60px;
+}
+
+.accountText{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25%;
+    
+}
+
+/*end of account*/

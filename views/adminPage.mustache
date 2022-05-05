@@ -15,15 +15,17 @@
   </div>
   <div class="text-center">
     <a href="/new" class="buttonadmin1"
-      style="border-radius: 20em; background-color: black; border: none; padding: 5px; color: white; margin-bottom:5%">
+      style="border-radius: 20em; background-color: black; border: none; padding: 5px; color: white; ">
       Add a new Meal to the Menu
     </a>
   </div>
-  <div class="wrapper">
+
+  <div class="wrapperadmin" id={{_id}} >
     {{#entries}}
 
     <div class="menu_post">
       <div>
+
         <div class="container_copy">
           <h1>
             {{meal}}
@@ -37,28 +39,88 @@
             {{description}}
           </p>
 
+
           <i style="color: #F6B352"> {{meal_time}} </i>
 
           <h3><b>
 
               £ {{price}}
             </b></h3>
-          <div class="buttonsforcards">
+
+          <!-- <div class="buttonsforcards">
             
               <ul>
-                <li><a href="/updateMeal" class="btnupdateMeal">
+                <li>
+                 <a href="/updateMeal" class="btnupdateMeal"  > 
                   Update
                 </a></li>
 
 
                 <li><a href="/delete" class="btnCreateMeal">
                   Delete Meal
-                </a></li>
+                </a></li> 
 
-              </ul>
+              </ul> 
             
+          </div>-->
+          <div>
+            <form action="/updateMeal" method="POST">
+
+
+              <div class="form-group">
+                <input type="text" id="_id" name="_id" value={{_id}} hidden>
+              </div>
+              <div class="form-group">
+                <label for="meal">New Meal Name:</label>
+                <input type="text" id={{meal}} name="meal" value="{{meal}}" placeholder="Enter new Meal" required>
+              </div>
+              <div class="form-group">
+                <label for="Ingredients">New Ingredients:</label>
+                <input type="text" id="Ingredients" name="Ingredients" value="{{Ingredients}}"
+                  placeholder="Enter all the ingredients used" required>
+              </div>
+              <div class="form-group">
+                <label for="description">New Description:</label>
+                <input type="text" id="description" name="description" value="{{description}}"
+                  placeholder="Enter your comments here." rows="3" required>
+  
+              </div>
+              <div class="form-group">
+                <label for="price">New Price</label>
+                <input type="text" id="price" name="price" value="{{price}}" placeholder="Enter price of meal" required>
+              </div>
+              <br>
+              <div class="form-group1">
+                <label for="meals">Choose a new meal time:</label>
+                
+                <input type="meal_time" id="meal_time" name="meal_type" value="{{meal_time}}" placeholder="Choose new meal type" required>
+                
+              </div>
+              <div class="buttonsforcards">
+
+                <ul>
+                  <li>
+                    <div class="form-group1">
+
+                      <button type="submit"  class="btnupdateMeal">Update </button>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-group1">
+
+                      <a href="/" class="btnCreateMeal">Delete</a>
+
+                    </div>
+                  </li>
+
+                </ul>
+
+              </div>
+
+
+            </form> 
           </div>
-          
+
         </div>
       </div>
     </div>

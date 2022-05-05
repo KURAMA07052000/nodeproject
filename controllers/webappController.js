@@ -4,7 +4,7 @@ const db = new webMenuDAO();
 db.init();
 
 exports.landing_page = function (req, res) {
-  db. getAllLunchEntries()
+  db.getAllLunchEntries()
     .then((list) => {
       res.render("menuLunch", {
         title: "Lunch Menu",
@@ -14,12 +14,12 @@ exports.landing_page = function (req, res) {
     .catch((err) => {
       console.log("promise rejected", err);
     });
-    
+
 };
 
 exports.account_page = function (req, res) {
-  
-  res.render("account", { 
+
+  res.render("account", {
     title: "Admin Account Page",
     user: "user"
   });
@@ -36,19 +36,19 @@ exports.dinner_menu_page = function (req, res) {
     .catch((err) => {
       console.log("promise rejected", err);
     });
-    
+
 };
 
 exports.about_page = function (req, res) {
-  res.render("about", { 
-  title: "About",
-});
+  res.render("about", {
+    title: "About",
+  });
 };
 
 exports.location_page = function (req, res) {
-  res.render("location", { 
-  title: "Location",
-});
+  res.render("location", {
+    title: "Location",
+  });
 };
 
 exports.show_login = function (req, res) {
@@ -56,11 +56,12 @@ exports.show_login = function (req, res) {
 };
 
 exports.handle_login = function (req, res) {
- 
+
   res.render("account", {
     title: "Admin Page",
     user: "user"
   });
+  
 };
 
 exports.show_register_page = function (req, res) {
@@ -133,30 +134,45 @@ exports.show_user_entries = function (req, res) {
     });
 };
 
-exports.show_update_entry = function (req,res) {
-  db.updateMealData(req.body._id, req.body.meal, req.body.Ingredients, req.body.description, req.body.price, req.body.meal_time);
-  db.getAllEntries()
-  .then((entries) => {
-  res.render("UpdateMeal", {
-    title: "Admin Update Meal",
-    user: "user",
-    entries: entries,
-  });
-})
-.catch((err) => {
-  console.log("Error: ");
-  console.log(JSON.stringify(err));
-});
-};
-  
+exports.show_update_entry = function (req, res) {
 
-exports.update_entry = function (req,res) {
+   //   db.getOneEntry(req.body.id)
+   //   .then((entries) => {
+   //   res.render("UpdateMeal", {
+   //     title: "Admin Update Meal",
+   //     user: "user",
+   //     entries: entries,
+   //   });
+   // })
+   // .catch((err) => {
+   //   console.log("Error: ");
+   //   console.log(JSON.stringify(err));
+   // });
+
+   db.getAllEntries(req.body._id)
+     .then((list) => {
+       res.render("updateMeal", {
+        title: "Update Meal",
+         user: "user",
+         entries: list,
+       });
+     })
+     .catch((err) => {
+      console.log("promise rejected", err);
+     });
+ };
+
+
+exports.update_entry = function (req, res) {
+  console.log(req.body._id, req.body.meal, req.body.Ingredients, req.body.description, req.body.price, req.body.meal_time);
   db.updateMealData(req.body._id, req.body.meal, req.body.Ingredients, req.body.description, req.body.price, req.body.meal_time);
-  res.redirect("accountPage");
+  //db.getAllEntries()
+  res.redirect("adminPage");
 }
 
-exports.delete_entry = function (req,res) {
+exports.delete_entry = function (req, res) {
   db.deleteMeal(req.body._id);
+  db.getAllEntries()
   res.redirect("adminPage");
 }
 
