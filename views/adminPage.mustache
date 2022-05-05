@@ -106,11 +106,7 @@
                     </div>
                   </li>
                   <li>
-                    <div class="form-group1">
-
-                      <a href="/" class="btnCreateMeal">Delete</a>
-
-                    </div>
+                    
                   </li>
 
                 </ul>
@@ -119,6 +115,10 @@
 
 
             </form> 
+            <form action="/delete" method="POST"> 
+              <input type="hidden" id="_id" name="_id" value={{_id}}>
+              <input type="submit" name="delete" value="Delete" class="btnCreateMeal">
+          </form>
           </div>
 
         </div>
